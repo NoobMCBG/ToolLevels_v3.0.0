@@ -645,7 +645,7 @@ class Main extends PB implements L {
         if($this->thor->get(strtolower($player->getName())) == true){
         if($inv->getItemInHand()->getId() == 746 and $inv->getItemInHand()->getCustomName() == "§l§c•§e Dụng Cụ Của§b $name §c|§e Cấp Độ:§a $level §c•" or $level >= 50){
             if(!isset($this->cooldown[$player->getName()])){
-                $this->cooldown[$player->getName()] = time() + 50;
+                $this->cooldown[$player->getName()] = time() + 5;
                 $pk = new PlaySoundPacket();
                 $pk->soundName = "ambient.weather.thunder";
                 $pk->volume = 150;
@@ -698,7 +698,7 @@ class Main extends PB implements L {
         if($this->hactram->get(strtolower($player->getName())) == true){
         if($inv->getItemInHand()->getId() == 743 and $inv->getItemInHand()->getCustomName() == "§l§c•§e Dụng Cụ Của§b $name §c|§e Cấp Độ:§a $level §c•" or $level >= 100){
             if(!isset($this->cooldown[$player->getName()])){
-                $this->cooldown[$player->getName()] = time() + 100;
+                $this->cooldown[$player->getName()] = time() + 10;
                 $pos = $player->getTargetBlock(15, $transparent = []);
                 $player->teleport($pos);
                 $center = new Vector3($player->x, $player->y, $player->z);
